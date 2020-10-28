@@ -21,11 +21,13 @@
     </properties>
 
     <dependencies>
+        <!--   Spring Cloud Starter Zuul (deprecated, please use spring-cloud-starter-netflix-zuul)  -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
             <version>1.4.7.RELEASE</version>
         </dependency>
+         
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -62,7 +64,8 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR2</version>
+                <!-- <version>Greenwich.SR6</version> -->
+                <version>Hoxton.SR8</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

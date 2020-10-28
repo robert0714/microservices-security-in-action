@@ -21,6 +21,7 @@
     </properties>
 
     <dependencies>
+        <!--   Spring Cloud Starter Zuul (deprecated, please use spring-cloud-starter-netflix-zuul)  -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
