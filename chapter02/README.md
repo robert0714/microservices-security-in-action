@@ -7,3 +7,9 @@
 # Notes
 
 * Page 43 / Section: 2.2.3, the curl command is missing closing doulbe quote after "read write"
+```
+\> curl -u orderprocessingapp:orderprocessingappsecret \
+-H "Content-Type: application/json" \
+-d '{"grant_type": "client_credentials", "scope": "read write"}' \
+http://localhost:8085/oauth/token |jq "."
+```
