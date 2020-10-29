@@ -29,7 +29,7 @@ EOF
 Upon successful execution of this request, you should see a response message:
 ```
 {
-    "orderId":"b5dd25a5-b39c-42c8-87d5-5103850c3cbc",
+    "orderId":"e0046f59-e57e-4df6-89a0-93fd85fbad8a",
     "items":[
         {
             "itemCode":"IT0001",
