@@ -1,12 +1,14 @@
 package com.manning.mss.ch05.sample01.orderentity;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LineItem {
-
+	@JsonAlias("code")
     @JsonProperty("itemCode")
     private String itemCode;
 
+	@JsonAlias("qty")
     @JsonProperty("quantity")
     private int quantity;
 

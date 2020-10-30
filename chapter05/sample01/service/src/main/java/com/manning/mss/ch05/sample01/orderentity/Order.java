@@ -1,5 +1,6 @@
 package com.manning.mss.ch05.sample01.orderentity;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
@@ -11,7 +12,8 @@ public class Order {
 
     @JsonProperty("items")
     private List<LineItem> items;
-
+    
+    @JsonAlias("shipping_address")    
     @JsonProperty("shippingAddress")
     private String shippingAddress;
 
