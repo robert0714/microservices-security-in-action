@@ -11,3 +11,13 @@
 -d '{"grant_type": "client_credentials", "scope": "read write"}' \
 http://localhost:8085/oauth/token |jq "."
 ```
+
+You should see this message on your terminal:
+```json
+{
+  "access_token": "ND0BufVUqWjiV5jg0n7XvBkWof4",
+  "token_type": "bearer",
+  "expires_in": 3599,
+  "scope": "read write"
+}
+```

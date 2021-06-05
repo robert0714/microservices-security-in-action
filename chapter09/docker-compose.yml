@@ -1,0 +1,23 @@
+version: '2'
+services:
+  zookeeper:
+    container_name: zookeeper
+    image: wurstmeister/zookeeper
+    network_mode: host
+  kafka:
+    container_name: kafka
+    image: wurstmeister/kafka:2.12-2.5.0
+    network_mode: host
+    environment:
+      DOCKER_API_VERSION: 1.22
+      KAFKA_ADVERTISED_HOST_NAME: 10.100.98.200
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_BROKER_ID: 1
+      KAFKA_CREATE_TOPICS: firsttopic:6:1
+      KAFKA_ZOOKEEPER_CONNECT: localhost:2181 
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092, SSL://0.0.0.0:9093
+      TZ: Asia/Taipei
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      -  zookeeper

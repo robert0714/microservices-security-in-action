@@ -1,0 +1,18 @@
+# https://github.com/trastle/docker-kafka-ssl/blob/master/docker-compose.yml
+version: '3'
+services:
+  zookeeper:
+    container_name: zookeeper
+    image:  wurstmeister/zookeeper
+    network_mode: host
+  kafka:
+    container_name: kafka
+    image: wurstmeister/kafka:2.12-2.5.0
+    network_mode: host
+    env_file:
+      - ./ssl.env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./keys:/keys
+    depends_on:
+      -  zookeeper
