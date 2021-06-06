@@ -96,7 +96,7 @@ microservice. Because the JWT is a little lengthy, you can use a small trick whe
 ```bash
 \> export TOKEN=jwt_access_token
 \> curl -k -H "Authorization: Bearer $TOKEN" \
-https://localhost:9443/orders/11
+https://localhost:9443/orders/11 |jq "."
 ```
 
 see the below
