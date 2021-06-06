@@ -8,7 +8,8 @@
 * **Page 173**, Now we want to get a JWT from the STS by using the following curl command, which
 is the same one you used in the preceding section. For clarity, we removed the long
 JWT in the response and replaced it with the value jwt_access_token:
-```
+
+```bash
 \> curl -v -X POST --basic -u applicationid:applicationsecret \
 -H "Content-Type: application/x-www-form-urlencoded;charset=UTF-8" \
 -k -d "grant_type=password&username=peter&password=peter123&scope=bar" \
@@ -30,6 +31,7 @@ Processing microservice. If everything goes well, the Order Processing microserv
 validates the JWT, accepts it, and then talks to the Inventory microservice to update
 the inventory. You’ll find the item numbers printed on the terminal that runs the
 Inventory microservice:
+
 ```bash
 \> export TOKEN=jwt_access_token
 \> curl -k -H "Authorization: Bearer $TOKEN" \
@@ -46,5 +48,5 @@ Inventory microservice:
     "items":[{"code":"101","qty":1},{"code":"103","qty":5}],
     "shipping_address":"201, 1st Street, San Jose, CA"
 }
-EOF 
+EOF
 ```
