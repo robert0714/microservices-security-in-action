@@ -23,6 +23,7 @@ https://localhost:8443/oauth/token | jq "."
 In this command, ***applicationid*** is the client ID of the web application, and
 ***applicationsecret*** is the client secret. If everything works, the STS returns an
 OAuth 2.0 access token, which is a JWT (or a JWS, to be precise):
+
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQ3ZDg3NTY3LTE4NDAtNGY0NS05NjE0LTQ5MDcxZmNhNGQyMSJ9.eyJzdWIiOiJwZXRlciIsImF1ZCI6IiouZWNvbW0uY29tIiwidXNlcl9uYW1lIjoicGV0ZXIiLCJzY29wZSI6WyJmb28iXSwiaXNzIjoic3RzLmVjb21tLmNvbSIsImV4cCI6MTYyMjc5NDY3MSwiaWF0IjoxNjIyNzg4NjcxLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOTNhYWY5NWUtODNkNy00OGFjLWFkMzctNGEwNGIzYzJhYzIyIiwiY2xpZW50X2lkIjoiYXBwbGljYXRpb25pZCJ9.EIEe9sw5kphAKD03Oe_5WRVUEGDClPDkncDLvdspEuB0_ELWC0hXFN7a6ubp9uvCjo98r6V-hJUxEwLTt1l0PIDzPzoqdQmEtVIc1zoLXiBuIkVS5cvLojWJrV7j18vd_lPn_fv4jsHS5Roy2oo-ML4D1MpFvLgnFvmfmp66hBuauzbxUb-WlWpaS9FEb7tjDRhDUBTntECT37qjhPlAliRam2YSICOlXaD00tKti3b8PfOd7zI_38ZTygdXgpwvwhwG9AujOi7MWJOMC9-e7AnMkOo0IOof9JeJxEJ7ki3zEn4wmPo_rO4eRa_AwwVTB2cYJW2JbUirbLA3kUUq1A",

@@ -17,11 +17,13 @@ with no security token. As expected, you should see an error message:
 }
 
 ```
+
 To invoke the Order Processing microservice with proper security, you need to get a
 JWT from the STS using the following curl command. This example assumes that the
 security token service discussed in the preceding section still runs on HTTPS port
 8443. For clarity, we removed the long JWT in the response and replaced it with the
 value jwt_access_token:
+
 ```bash
 \> curl -v -X POST --basic -u applicationid:applicationsecret \
 -H "Content-Type: application/x-www-form-urlencoded;charset=UTF-8" \
@@ -36,6 +38,9 @@ https://localhost:8443/oauth/token |jq "."
 "scope":"foo"
 }
 ```
+
+
+
 Now let’s invoke the Order Processing microservice with the JWT we got from the
 curl command. Set the same JWT in the HTTP Authorization Bearer header using
 the following curl command and invoke the Order Processing microservice. Because
@@ -69,7 +74,13 @@ https://localhost:9443/orders/11  |jq "."
   ],
   "shipping_address": "201, 1st Street, San Jose, CA"
 }
+```
 
+Notice if yours is 1.4.x spring-boot , application.properties dos not need security.oauth2.client.client-id , security.oauth2.client.clientSecret
+
+```properties
+security.oauth2.client.client-id=applicationid
+security.oauth2.client.clientSecret=applicationsecret
 ```
 
 ## 7.4 Using JWT as a data source for access control
